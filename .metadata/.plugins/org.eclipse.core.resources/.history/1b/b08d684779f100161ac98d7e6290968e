@@ -1,0 +1,69 @@
+
+public class StacksAndQueues {
+	
+	public final static String seperator = "=====================================================";
+	
+	public static void main(String[] args) throws Exception{
+		
+		/*
+		 * Start testing the drop out stack
+		 * =======================================================
+		 */
+		
+		dropOutStack test = new dropOutStack(5);
+		test.push(5);
+		test.push(9);
+		test.push(4);
+		test.push(0);
+		test.push(1);
+		test.push(6);
+		test.push(2);
+		test.push(44);
+		for(int i = 0; i<test.size(); i++){
+			try{
+				System.out.println(test.pop());
+			}
+			catch(Exception e){
+				System.out.println("Ran out of array");
+			}
+		}
+		
+		/*
+		 * Finished testing the drop out stack
+		 * =======================================================
+		 */
+		
+		/*
+		 * Start testing the deque 
+		 * =======================================================
+		 */
+		
+		myDeque<String> test2 = new myDeque<>();
+		System.out.println(seperator);
+		System.out.println("Begin testing myDeque");
+		System.out.println(seperator);
+		System.out.println("Size = "+test2.size());
+		System.out.println("Pushing string 'Hello' to end");
+		test2.pushEnd("Hello");
+		System.out.println("Peek end = "+test2.peekEnd());
+		System.out.println("Peek start = "+test2.peekStart());
+		System.out.println("Size = "+test2.size());
+		System.out.println("Pushing string 'Goodbye' to the end");
+		test2.pushEnd("Goodbye");
+		System.out.println("Peek end = "+test2.peekEnd());
+		System.out.println("Peek start = "+test2.peekStart());
+		System.out.println("Size = "+test2.size());
+		System.out.println("Pushing string 'foo' to the start");
+		test2.pushStart("foo");
+		System.out.println("Pushing string 'bar' to the start");
+		test2.pushStart("bar");
+		System.out.println("Peek end = "+test2.peekEnd());
+		System.out.println("Peek start = "+test2.peekStart());
+		System.out.println("Size = "+test2.size());
+		System.out.println("Pop from end = "+test2.popEnd());
+		System.out.println("Size = "+test2.size());
+		System.out.println("Pop from start = "+test2.popStart());
+		System.out.println("Size = "+test2.size());
+		
+	}
+}

@@ -1,0 +1,30 @@
+//T00052042
+
+package Lab_One_Tyler;
+
+//Class inheritance from Parent Automobile to Child Truck
+public class Truck extends Automobile {
+
+	protected int boxLength;
+
+	// Constructor assigns values to color, doors and truck boxLength
+	public Truck(String colorValue, int doorsValue, int boxLengthValue) {
+		super(colorValue, doorsValue);
+		boxLength = boxLengthValue;
+	}
+
+	// toString method for Truck Class. Returns color, doors and boxlength.
+	public String toString() {
+		return "Color = " + color + ", Doors = " + doors + ", Box Length = " + boxLength + "\'";
+	}
+
+	// getboxLength method. Returns an int value.
+	protected int getBoxLength() {
+		return boxLength;
+	}
+
+	// setboxLength method. Sets boxLength to boxLengthValue.
+	protected void setBoxLength(int boxLengthValue) {
+		boxLength = boxLengthValue;
+	}
+}

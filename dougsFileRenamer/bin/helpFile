@@ -1,0 +1,19 @@
+What is an extension?
+
+-The extension is the last three letters of any file. For a word document for example the extension is .doc.
+if you wish to change all files of type .doc to .txt for example, simply enter "doc" without the quotations
+in the "Origional file extension" text box and enter "txt" without quotations in the "New file extension" box.
+
+What is a file path?
+
+-The file path is a way for the program to find where on your hard drive the files are stored. To find the file path
+open the folder containing the files you want to edit and look for a line near the top of the file explorer that looks
+something like this --> C:\Users\john\Desktop\examplefolder 
+copy that path and paste it using ctrl + V into the "Path to files" text box
+
+*IMPORTANT* Do NOT use the file path for the file itself. If you paste a file path and it looks something 
+like this --> C:\Users\john\Desktop\examplefolder\aFile.ext 
+Then you have done it wrong. Notice the .ext extension- ^^^		If the file path has a "dot anything" (.txt, .doc, .mov)
+simply delete the file with the extension attatched so;
+
+C:\Users\john\Desktop\examplefolder\aFile.ext  |BECOMES -->|  C:\Users\john\Desktop\examplefolder

@@ -1,0 +1,43 @@
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+public class main_logic {
+
+	
+	public static File[] getSubDirectories(String currentFile){
+		File directory = new File(currentFile);
+		File[] subdirs = directory.listFiles();
+		for (int i = 0; i<=subdirs.length; i++) {
+			System.out.println(subdirs[i].toString());
+			System.out.println(getFileExtension(subdirs[i].toString()));
+		}
+		return subdirs;
+		
+	}
+	
+	public static String getFileExtension(String file){
+		String returnExtension = "";
+		if(file.contains(".")){
+			for(int i = file.length()-3;i<file.length();i++){
+				returnExtension = returnExtension + file.charAt(i);
+				
+			}
+			return returnExtension;
+		}
+		
+		return "_directory_";
+		
+	}
+	
+	public static void systemMap(String beginFile){
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args){
+		getSubDirectories("C:\\Windows\\");
+		
+	}
+}

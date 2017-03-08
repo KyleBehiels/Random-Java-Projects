@@ -1,0 +1,10 @@
+
+public class myDeque {
+	
+	public static final int default_size = 10;
+	public static Object[] dequeArray;
+	public myDeque(){
+		dequeArray = new Object[default_size];
+	}
+	
+}

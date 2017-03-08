@@ -1,0 +1,56 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+
+public class startMenu {
+
+	private JFrame frame;
+	private JTextField txtTeamname;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					startMenu window = new startMenu();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public startMenu() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 1054, 647);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblTeamName = new JLabel("Team Name");
+		lblTeamName.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lblTeamName.setBounds(55, 25, 199, 73);
+		frame.getContentPane().add(lblTeamName);
+		
+		txtTeamname = new JTextField();
+		txtTeamname.setText("teamName");
+		txtTeamname.setBounds(266, 59, 116, 22);
+		frame.getContentPane().add(txtTeamname);
+		txtTeamname.setColumns(10);
+	}
+}

@@ -1,0 +1,23 @@
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class IOProject {
+
+	public static void main(String[] args) throws IOException{
+		Elephant Ellie = new Elephant("Trumpet","Walk", "Ellie", 2000);
+		Write_Bin(Ellie);
+	}
+	
+	public static void Write_Bin(Animal inputAnimal) throws IOException{
+		FileOutputStream thisStream = new FileOutputStream("animals.dat");
+		DataOutputStream outputFile = new DataOutputStream(thisStream);
+		outputFile.writeUTF(inputAnimal.animalMovement);
+		outputFile.writeUTF(inputAnimal.animalSound);
+		outputFile.writeUTF(inputAnimal.animalName);
+		outputFile.close();
+		
+	}
+	
+}
