@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.EmptyStackException;
+import java.util.List;
+
+import javax.print.attribute.Size2DSyntax;
+import javax.swing.text.TabStop;
+
+public class stackArrayList<T>{
+	ArrayList<T> dataList;
+	int top = 0;
+	public stackArrayList() {
+		dataList = new ArrayList<T>();
+	}
+	public void push(T pushable){
+		dataList.add(pushable);
+		top++;
+	}
+	public T pop() throws EmptyStackException{
+		try{
+		T returnable = dataList.get(top);
+		dataList.remove(top);
+		top--;
+		return returnable;
+		}
+		catch (Exception e) {
+			throw new EmptyStackException();
+		}
+	}
+	public T peek() throws EmptyStackException{
+		try{
+			return dataList.get(top-1);
+		}
+		catch (Exception e) {
+			throw new EmptyStackException();
+		}
+	}
+	public boolean isEmpty(){
+		if(top == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public int size(){
+		return top;
+	}
+}

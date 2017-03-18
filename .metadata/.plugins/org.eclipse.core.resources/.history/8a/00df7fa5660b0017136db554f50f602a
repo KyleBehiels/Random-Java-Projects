@@ -1,0 +1,8 @@
+
+public class testerClass {
+	stackArrayList<String> myStack = new stackArrayList<>();
+	
+	public static void main(String[] args){
+		myStack.push("Hello");
+	}
+}

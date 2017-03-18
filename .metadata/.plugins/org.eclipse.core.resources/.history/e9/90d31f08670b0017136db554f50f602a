@@ -1,0 +1,17 @@
+
+public class testerClass {
+	
+	public static void main(String[] args){
+		stackArrayList<String> myStack = new stackArrayList<>();
+		myStack.push("Hello");
+		System.out.println(myStack.pop());
+		myStack.push("Fuck you");
+		myStack.push("JK I love you");
+		myStack.push("This is fun");
+		System.out.println(myStack.pop());
+		System.out.println(myStack.pop());
+		System.out.println(myStack.pop());
+		myStack.push("Test");
+		System.out.println(myStack.peek());
+	}
+}
